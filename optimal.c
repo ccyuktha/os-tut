@@ -1,3 +1,4 @@
+//os tutorial optimal page replacement algorithm
 #include<stdio.h>
 int main()
 {
