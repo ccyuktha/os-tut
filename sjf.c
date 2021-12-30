@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main() 
 {
-      int at[10], bt[10], temp[10],bt[10];
+      int at[10], bt[10], temp[10],btemp[10];
       int i, lowest, count = 0, time, limit;
       double wait_time = 0, turnaround_time = 0, end,ct[10];
       float avg_wt, avg_tat;
@@ -17,7 +17,7 @@ int main()
             printf("Enter Burst Time:\t");
             scanf("%d", &bt[i]); 
             temp[i] = bt[i];
-            bt[i]= bt[i];
+            btemp[i]= bt[i];
       }
       bt[9] = 9999;  
       for(time = 0; count != limit; time++)
@@ -48,7 +48,7 @@ int main()
       for(i = 0; i < limit; i++){
           tat[i]=ct[i]-at[i];
           wt[i]=tat[i]-bt[i];
-          printf("%d\t%d\t%d\t%f\t%f\t%f\n",i+1,at[i],bt[i],ct[i],wt[i],tat[i]);
+          printf("%d\t%d\t%d\t%f\t%f\t%f\n",i+1,at[i],btemp[i],ct[i],wt[i],tat[i]);
       }
       
       printf("\navg wt Time:\t %lf \n", avg_wt);
