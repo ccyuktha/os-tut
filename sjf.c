@@ -44,14 +44,14 @@ int main()
       }
       avg_wt = wait_time / limit; 
       avg_tat = turnaround_time / limit;
-      printf("p\tat\tbt\tct      \twt      \ttat\n");
+      printf("\nProcesses\tarrival time\tburst time\tcompletion time      \twait time      \tturn around time\n");
       for(i = 0; i < limit; i++){
           tat[i]=ct[i]-at[i];
           wt[i]=tat[i]-bt[i];
-          printf("%d\t%d\t%d\t%f\t%f\t%f\n",i+1,at[i],btemp[i],ct[i],wt[i],tat[i]);
+          printf("%d     \t        %d\t        %d\t        %f\t        %f\t       %f\n",i+1,at[i],btemp[i],ct[i],wt[i],tat[i]);
       }
       
-      printf("\navg wt Time:\t %lf \n", avg_wt);
+      printf("\navg wating Time:\t %lf \n", avg_wt);
       printf("avg Turnaround Time:\t %lf \n", avg_tat);
       return 0;
 }
