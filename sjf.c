@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main() 
 {
-      int at[10], bt[10], temp[10],btemp[10];
+      int at[30], bt[30], temp[30],btemp[30];
       int i, lowest, count = 0, time, limit;
-      double wait_time = 0, turnaround_time = 0, end,ct[10];
+      double wait_time = 0, turnaround_time = 0, end,ct[30];
       float avg_wt, avg_tat;
-      float wt[10],tat[10];
+      float wt[30],tat[30];
       printf("Enter the Total Number of Processes:\t");
       scanf("%d", &limit); 
       printf("\nEnter Details of %d Processes\n", limit);
@@ -19,10 +19,10 @@ int main()
             temp[i] = bt[i];
             btemp[i]= bt[i];
       }
-      bt[9] = 9999;  
+      bt[29] = 9999;  
       for(time = 0; count != limit; time++)
       {
-            lowest = 9;
+            lowest = 29;
             for(i = 0; i < limit; i++)
             {
                   if(at[i] <= time && bt[i] < bt[lowest] && bt[i] > 0)
